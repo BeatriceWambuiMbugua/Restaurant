@@ -2,5 +2,6 @@
     <string name="app_name">Restaurant</string>
     <string name="title">MyRestaurant</string>
     <string name="button_name">Find Restaurants</string>
+    <string name="zipcode">Enter Zip Code</string>
 
 </resources>
