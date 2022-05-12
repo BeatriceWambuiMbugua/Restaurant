@@ -29,7 +29,7 @@
         android:layout_above="@+id/findRestaurantsButton"
         android:background="@color/primary_color"
         android:layout_marginBottom="10dp"
-        android:padding="5dp"
+        android:padding="10dp"
         android:hint="@string/zipcode"
         android:layout_centerHorizontal="true"
         />
