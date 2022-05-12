@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Restaurant</string>
-    <string name="title">myRestaurant</string>
+    <string name="title">MyRestaurant</string>
     <string name="button_name">Find Restaurants</string>
 
 </resources>
