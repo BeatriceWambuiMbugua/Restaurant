@@ -36,9 +36,6 @@ public class RestaurantsActivity extends AppCompatActivity {
                 String restaurant = ((TextView)view).getText().toString();
                 Toast.makeText(RestaurantsActivity.this, restaurant, Toast.LENGTH_SHORT).show();
             }
-
-            @Override
-
         });
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
