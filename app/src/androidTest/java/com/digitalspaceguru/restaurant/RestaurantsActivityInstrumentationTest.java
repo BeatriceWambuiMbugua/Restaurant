@@ -43,7 +43,7 @@ public class RestaurantsActivityInstrumentationTest {
     @Test
     public void listItemClickDisplaysToastWithCorrectRestaurant() {
         String restaurantName = "Mi Mero Mole";
-        onData(anything())
+        onData(anything()) //onData interacts with data in an adapter
                 .inAdapterView(withId(R.id.listView))
                 .atPosition(0)
                 .perform(click());
