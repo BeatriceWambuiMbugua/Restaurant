@@ -18,7 +18,7 @@ public class RestaurantsActivity extends AppCompatActivity {
     //private TextView mlocationTextView;
   //  private ListView mListView;
     @BindView(R.id.locationTextView) TextView mlocationTextView;
-    @BindView(R.id.listView) ListView mlistView;
+    @BindView(R.id.listView) ListView mListView;
     private String[] restaurants = new String[]{"Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
