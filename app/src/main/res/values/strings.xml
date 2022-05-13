@@ -3,5 +3,6 @@
     <string name="title">MyRestaurant</string>
     <string name="button_name">Find Restaurants</string>
     <string name="zipcode">Enter Zip Code</string>
+    <string name="locationTextview">Restaurants near</string>
 
 </resources>
