@@ -16,9 +16,11 @@ import butterknife.ButterKnife;
 
 public class RestaurantsActivity extends AppCompatActivity {
     //private TextView mlocationTextView;
-  //  private ListView mListView;
-    @BindView(R.id.locationTextView) TextView mlocationTextView;
-    @BindView(R.id.listView) ListView mListView;
+    //  private ListView mListView;
+    @BindView(R.id.locationTextView)
+    TextView mlocationTextView;
+    @BindView(R.id.listView)
+    ListView mListView;
     private String[] restaurants = new String[]{"Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
@@ -29,8 +31,8 @@ public class RestaurantsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
-       //mlocationTextView = (TextView) findViewById(R.id.locationTextView);
-       // mListView = (ListView) findViewById(R.id.listView);
+        //mlocationTextView = (TextView) findViewById(R.id.locationTextView);
+        // mListView = (ListView) findViewById(R.id.listView);
         ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, restaurants);
@@ -39,7 +41,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String restaurant = ((TextView)view).getText().toString();
+                String restaurant = ((TextView) view).getText().toString();
                 Toast.makeText(RestaurantsActivity.this, restaurant, Toast.LENGTH_SHORT).show();
             }
         });
