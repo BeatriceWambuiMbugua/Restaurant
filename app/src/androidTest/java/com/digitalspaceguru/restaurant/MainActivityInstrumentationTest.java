@@ -1,6 +1,8 @@
 package com.digitalspaceguru.restaurant;
 
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -27,6 +29,22 @@ public class MainActivityInstrumentationTest {
         onView(withId(R.id.locationEditText))//onView() specifies that we want to interact with a view -withId() is a ViewMatcher method that allows us to find specific views by I
                 .perform(typeText("Nairobi"))  //typeText() is a ViewAction method that allows us to type the specified text into our EditText
                 .check(matches(withText("Nairobi")));  // matches() is a ViewAssertion method that validates the specific properties of the given view
+    }
+
+    @Test
+    public void locationIsSentToRestaurantActivity(){
+        String location = "Nairobi";
+        onView(withId(R.id.locationEditText))
+                .perform(typeText(location))
+                .perform(closeSoftKeyboard());
+        try{ //  // the sleep method requires to be checked and handled so we use try block
+            Thread.sleep(250);
+        } catch (InterruptedException e){
+            System.out.println("got interrupted!");
+        }
+        onView(withId(R.id.findRestaurantsButton)).perform(click());
+        onView(withId(R.id.locationTextView))
+                .check(matches(withText("Here are the restaurants near the place: " + location)));
     }
 
 
